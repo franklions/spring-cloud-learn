@@ -13,6 +13,7 @@
         <module>spring-cloud-learn-gateway-service</module>
         <module>spring-cloud-learn-zuul-demo</module>
         <module>spring-cloud-learn-eureka-cluster</module>
+        <module>spring-cloud-learn-zipkin-demo</module>
     </modules>
     <packaging>pom</packaging>
 
