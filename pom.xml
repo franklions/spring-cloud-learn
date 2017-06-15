@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-cloud-learn-eureka-demo</module>
+        <module>spring-cloud-learn-micro-service</module>
+        <module>spring-cloud-learn-gateway-service</module>
+        <module>spring-cloud-learn-zuul-demo</module>
+        <module>spring-cloud-learn-eureka-cluster</module>
     </modules>
     <packaging>pom</packaging>
 
