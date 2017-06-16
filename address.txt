@@ -1,0 +1,6 @@
+eureka:localhost:9001
+gateway:localhost:9003
+micro:localhost:9002
+zipkin:localhost:9004
+zuul:localhost:9009
+zipkin-stream:9005
