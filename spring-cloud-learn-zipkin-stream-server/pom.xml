@@ -39,30 +39,30 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!--&lt;!&ndash;保存到数据库需要如下依赖&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
-        <!--</dependency>-->
-
-        <!-- 日志数据保存到ES -->
-
+        <!--保存到数据库需要如下依赖-->
         <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin</artifactId>
-            <version>1.24.0</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-autoconfigure-storage-elasticsearch-http</artifactId>
-            <version>1.24.0</version>
-            <optional>true</optional>
-        </dependency>
+        <!--&lt;!&ndash; 日志数据保存到ES &ndash;&gt;-->
+
+        <!--<dependency>-->
+            <!--<groupId>io.zipkin.java</groupId>-->
+            <!--<artifactId>zipkin</artifactId>-->
+            <!--<version>1.24.0</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>io.zipkin.java</groupId>-->
+            <!--<artifactId>zipkin-autoconfigure-storage-elasticsearch-http</artifactId>-->
+            <!--<version>1.24.0</version>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
 
     </dependencies>
 
