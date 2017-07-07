@@ -17,4 +17,9 @@ public class ValuesController {
     public String getValues(){
         return "Sever values";
     }
+
+    @GetMapping("/user")
+    public String getUser(){
+        return "User info!";
+    }
 }
