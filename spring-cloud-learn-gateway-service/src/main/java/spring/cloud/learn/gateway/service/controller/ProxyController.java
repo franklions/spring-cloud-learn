@@ -1,7 +1,7 @@
 package spring.cloud.learn.gateway.service.controller;
 
+import com.iemylife.iot.webtoolkit.IotHttp;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,10 +17,13 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class ProxyController {
 
-    private final Logger log = Logger.getLogger(ProxyController.class);
+//    private final Logger log = Logger.getLogger(ProxyController.class);
+
+//    @Autowired
+//    RestTemplate restTemplate;
 
     @Autowired
-    RestTemplate restTemplate;
+    IotHttp iotHttp;
 
     @GetMapping("/proxy/value")
     public String getValues(){
@@ -29,6 +32,7 @@ public class ProxyController {
 
     @HystrixCommand(fallbackMethod = "ShowServiceFallback")
     private String getValueService(){
-        return  restTemplate.getForEntity("http://zuul-v0/v0/micro/value",String.class).getBody();
+//        return  restTemplate.getForEntity("http://zuul-v0/v0/micro/value",String.class).getBody();
+       return   iotHttp.get("http://zuul-v0/v0/micro/value",String.class).getValue().get();
     }
 }
