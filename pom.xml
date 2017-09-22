@@ -15,6 +15,7 @@
         <module>spring-cloud-learn-eureka-cluster</module>
         <module>spring-cloud-learn-zipkin-demo</module>
         <module>spring-cloud-learn-zipkin-stream-server</module>
+        <module>spring-cloud-learn-zipkin-custom-server</module>
     </modules>
     <packaging>pom</packaging>
 
