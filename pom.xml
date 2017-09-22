@@ -16,6 +16,7 @@
         <module>spring-cloud-learn-zipkin-demo</module>
         <module>spring-cloud-learn-zipkin-stream-server</module>
         <module>spring-cloud-learn-zipkin-custom-server</module>
+        <module>spring-cloud-learn-config-server</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -45,8 +46,8 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <!--<version>Camden.SR7</version>-->
-                <version>Dalston.SR1</version>
+                <version>Camden.SR7</version>
+                <!--<version>Dalston.SR3</version>-->
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
