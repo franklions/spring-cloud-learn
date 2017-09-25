@@ -16,14 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-    @Value("${spring.rabbitmq.host}")
-    private String host;
+    @Value("${from}")
+    private String from;
 
-    @Value("${spring.rabbitmq.port}")
-    private Integer port;
-
-    @RequestMapping("/addr")
-    public String address(){
-        return host +":"+port;
+    @RequestMapping("/from")
+    public String from(){
+        return from;
     }
 }
