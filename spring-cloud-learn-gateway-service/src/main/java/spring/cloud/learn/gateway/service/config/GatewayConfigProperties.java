@@ -1,6 +1,8 @@
 package spring.cloud.learn.gateway.service.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.stereotype.Component;
 
 /**
  * @author flsh
@@ -10,6 +12,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @since Jdk 1.8
  */
 @ConfigurationProperties("gateway")
+@Component("gatewayConfigProperties")
+@RefreshScope
 public class GatewayConfigProperties {
 
 
