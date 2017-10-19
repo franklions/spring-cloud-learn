@@ -7,6 +7,7 @@
         <groupId>spring.cloud.learn</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spring.cloud.learn</groupId>
@@ -34,7 +35,6 @@
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-autoconfigure-ui</artifactId>
-            <version>1.27.0</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -48,20 +48,25 @@
             <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
         <!--</dependency>-->
 
-        <!-- 日志数据保存到ES -->
+        <!-- zipkin数据保存到ES -->
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin</artifactId>
-            <version>1.27.0</version>
+            <version>1.23.1</version>
         </dependency>
 
         <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-autoconfigure-storage-elasticsearch-http</artifactId>
-            <version>1.27.0</version>
+            <version>1.23.1</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <!--zipkin数据保存到ES-->
 
     </dependencies>
-
 </project>
