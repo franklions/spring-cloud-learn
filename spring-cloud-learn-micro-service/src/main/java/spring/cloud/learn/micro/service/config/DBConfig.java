@@ -1,8 +1,8 @@
 package spring.cloud.learn.micro.service.config;
 
-import com.ctrip.framework.apollo.model.ConfigChangeEvent;
-import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+//import com.ctrip.framework.apollo.model.ConfigChangeEvent;
+//import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
+//import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,11 +25,11 @@ public class DBConfig {
 
     private static Logger logger = Logger.getLogger(DBConfig.class);
 
-    @Autowired
-    private org.springframework.cloud.context.scope.refresh.RefreshScope refreshScope;
+//    @Autowired
+//    private org.springframework.cloud.context.scope.refresh.RefreshScope refreshScope;
 
     @Bean
-    @RefreshScope
+//    @RefreshScope
     public DataSource dataSource(@Value("${spring.datasource.driver-class-name}") String driver,
                                  @Value("${spring.datasource.url}") String url,
                                  @Value("${spring.datasource.username}") String username,

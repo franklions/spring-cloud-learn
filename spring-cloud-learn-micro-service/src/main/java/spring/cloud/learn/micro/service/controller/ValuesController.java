@@ -1,6 +1,6 @@
 package spring.cloud.learn.micro.service.controller;
 
-import com.netflix.discovery.converters.Auto;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +18,8 @@ import spring.cloud.learn.micro.service.service.UserServiceImpl;
 @RestController
 public class ValuesController {
 
+    private final Logger log = Logger.getLogger(ValuesController.class);
+
     @Autowired
     UserServiceImpl userService;
 
@@ -31,6 +33,9 @@ public class ValuesController {
 
     @GetMapping("/user/{id}")
     public String getUser(@PathVariable("id") Long id){
+
+        log.info("/user/"+id);
+
         counterService.increment("micro.user.count");
         return userService.getUserById(id).toString();
     }

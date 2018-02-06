@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
  * @since Jdk 1.8
  */
 @ConfigurationProperties("gateway")
-@Component("gatewayConfigProperties")
-@RefreshScope
+//@Component("gatewayConfigProperties")
+//@RefreshScope
 public class GatewayConfigProperties {
     private String zuulAppName;
     private String microUrl;

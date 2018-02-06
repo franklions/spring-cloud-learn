@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2017/9/25
  * @since Jdk 1.8
  */
-@RefreshScope
+//@RefreshScope
 @RestController
 public class ConfigController {
 

@@ -17,6 +17,7 @@
         <module>spring-cloud-learn-zipkin-stream-server</module>
         <module>spring-cloud-learn-zipkin-custom-server</module>
         <module>spring-cloud-learn-config-server</module>
+        <module>spring-cloud-learn-task-center</module>
     </modules>
     <packaging>pom</packaging>
 

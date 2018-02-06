@@ -1,6 +1,7 @@
 package spring.cloud.learn.gateway.service.config;
 
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+//import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+import com.uber.jaeger.samplers.ProbabilisticSampler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -19,7 +20,18 @@ import javax.annotation.Resource;
  * @since Jdk 1.8
  */
 @Configuration
-@EnableApolloConfig(value = {"application","application-dev"}, order = 10)
+@EnableConfigurationProperties(GatewayConfigProperties.class)
+//@EnableApolloConfig(value = {"application","application-dev"}, order = 10)
 public class GatewayConfig {
-
+    @Bean
+    public io.opentracing.Tracer jaegerTracer() {
+        return new com.uber.jaeger.Configuration("spring-boot",
+                new com.uber.jaeger.Configuration.SamplerConfiguration(ProbabilisticSampler.TYPE, 1, "192.168.12.54:5775"),
+                    new com.uber.jaeger.Configuration.ReporterConfiguration(false,
+                            "192.168.12.54",
+                            5775,
+                            1000,
+                            100))
+                .getTracer();
+    }
 }

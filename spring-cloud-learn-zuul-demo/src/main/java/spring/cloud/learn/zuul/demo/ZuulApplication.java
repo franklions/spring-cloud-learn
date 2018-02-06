@@ -35,6 +35,6 @@ public class ZuulApplication implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        FilterProcessor.setProcessor(new ExtFilterProcessor());
+//        FilterProcessor.setProcessor(new ExtFilterProcessor());
     }
 }
